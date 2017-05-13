@@ -1,0 +1,23 @@
+<ActionBar title="My F App" class="action-bar">
+</ActionBar>
+<StackLayout class="page">
+    <!--<ListView [items]="items" class="list-group">
+        <ng-template let-item="item">
+            <Label [nsRouterLink]="['/item', item.id]" [text]="item.name"
+                class="list-group-item"></Label>
+        </ng-template>
+    </ListView>-->
+    <Button text="Connection" (tap)="connection()"></Button>
+    <Button text="Connect to" (tap)="connectTo('to do')"></Button>
+    <Button text="List !" (tap)="list()"></Button>
+    <Button text="Send message !" (tap)="send()"></Button>
+
+    <!--<ListView [items]="items" class="list-group">
+        <ng-template let-item="peersId">
+            <Label [text]="item"
+                class="list-group-item"></Label>
+        </ng-template>
+    </ListView>-->
+
+    <Button *ngFor="let peerId of peersId" [text]="'talk to ' + peerId" (tap)="connectTo(peerId)"></Button>
+</StackLayout>
