@@ -4,20 +4,52 @@
 		"selected_items":
 		[
 			[
+				"li",
+				"listenToMediaConnection\tmethod"
+			],
+			[
+				"med",
+				"mediaConnection\tproperty"
+			],
+			[
+				"lis",
+				"listenToMediaConnection\tmethod"
+			],
+			[
+				"mi",
+				"mineStream\tproperty"
+			],
+			[
+				"view",
+				"generateViewId\tmethod"
+			],
+			[
+				"c",
+				"ContentLayout\tclass"
+			],
+			[
+				"get",
+				"getUserMedia\tmethod"
+			],
+			[
+				"getUs",
+				"getUserMedia2\tmethod"
+			],
+			[
+				"cons",
+				"constructor\tkeyword"
+			],
+			[
+				"na",
+				"nativeView\tproperty"
+			],
+			[
 				"s",
 				"sendMessage\tmethod"
 			],
 			[
-				"c",
-				"connectTo\tmethod"
-			],
-			[
 				"h",
 				"hisDataConnection\tproperty"
-			],
-			[
-				"lis",
-				"listenToDataConnection\tmethod"
 			],
 			[
 				"m",
@@ -260,10 +292,6 @@
 				"text-align"
 			],
 			[
-				"mi",
-				"minWidth\tproperty"
-			],
-			[
 				"wid",
 				"width"
 			],
@@ -362,10 +390,6 @@
 			[
 				"route",
 				"router\tproperty"
-			],
-			[
-				"li",
-				"listFromFirebase\tmethod"
 			],
 			[
 				"u",
@@ -490,30 +514,6 @@
 			[
 				"loca",
 				"getLocationRelativeTo\tmethod"
-			],
-			[
-				"add",
-				"addMarker\tmethod"
-			],
-			[
-				"margin-",
-				"margin-left"
-			],
-			[
-				"sh",
-				"showDrawer\tmethod"
-			],
-			[
-				"mul",
-				"instructionsMultiChoice\tproperty"
-			],
-			[
-				"ins",
-				"instructionsMultiChoice\tproperty"
-			],
-			[
-				"font-s",
-				"font-size"
 			]
 		]
 	},
@@ -523,7 +523,7 @@
 			"file": "demo/app/item/items.component.html",
 			"settings":
 			{
-				"buffer_size": 927,
+				"buffer_size": 1141,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -532,33 +532,76 @@
 			"file": "demo/app/item/items.component.ts",
 			"settings":
 			{
-				"buffer_size": 1498,
+				"buffer_size": 3007,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "webrtc.common.ts",
+			"settings":
+			{
+				"buffer_size": 582,
+				"line_ending": "Windows"
 			}
 		},
 		{
 			"file": "webrtc.android.ts",
 			"settings":
 			{
-				"buffer_size": 6814,
+				"buffer_size": 11953,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "webrtc.common.d.ts",
+			"settings":
+			{
+				"buffer_size": 208,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "node_modules/tns-platform-declarations/android/declarations.d.ts",
+			"settings":
+			{
+				"buffer_size": 2062,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "demo/package.json",
+			"settings":
+			{
+				"buffer_size": 1136,
+				"line_ending": "Unix"
 			}
 		},
 		{
 			"file": "package.json",
 			"settings":
 			{
-				"buffer_size": 2026,
+				"buffer_size": 2214,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "activity.ts",
+			"settings":
+			{
+				"buffer_size": 1546,
+				"encoding": "UTF-8",
+				"line_ending": "Windows",
+				"name": "import {setActivityCallbacks, AndroidActivityCallb"
 			}
 		},
 		{
 			"file": "webrtc.android.d.ts",
 			"settings":
 			{
-				"buffer_size": 593,
+				"buffer_size": 772,
 				"line_ending": "Windows"
 			}
 		},
@@ -566,7 +609,7 @@
 			"file": "index.d.ts",
 			"settings":
 			{
-				"buffer_size": 417,
+				"buffer_size": 468,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -626,10 +669,13 @@
 		"/C/Users/Greg/Documents/GitHub/nativescript-webrtc/demo",
 		"/C/Users/Greg/Documents/GitHub/nativescript-webrtc/demo/app",
 		"/C/Users/Greg/Documents/GitHub/nativescript-webrtc/demo/app/item",
-		"/C/Users/Greg/Documents/GitHub/nativescript-webrtc/demo/platforms"
+		"/C/Users/Greg/Documents/GitHub/nativescript-webrtc/platforms",
+		"/C/Users/Greg/Documents/GitHub/nativescript-webrtc/platforms/android"
 	],
 	"file_history":
 	[
+		"/C/Users/Greg/Documents/GitHub/nativescript-webrtc/demo/node_modules/nativescript-webrtc/.npmignore",
+		"/C/Users/Greg/Documents/GitHub/nativescript-webrtc/activity.android.d.ts",
 		"/C/Users/Greg/Documents/GitHub/nativescript-webrtc/package.json",
 		"/C/Users/Greg/Documents/GitHub/nativescript-webrtc/platforms/android/AndroidManifest.xml",
 		"/C/Users/Greg/Documents/GitHub/nativescript-webrtc/tsconfig.json",
@@ -755,9 +801,7 @@
 		"/C/Users/Greg/AppData/Roaming/Sublime Text 3/Packages/User/TypeScript.sublime-settings",
 		"/C/Users/Greg/AppData/Roaming/Sublime Text 3/Packages/User/Package Control.sublime-settings",
 		"/C/Users/Greg/Documents/GitHub/nowga/mobileApp/Nowgua/firebase.nativescript.json",
-		"/C/Users/Greg/Documents/GitHub/nowga/mobileApp/Nowgua/app/shared/firebase/database/database.service.ts",
-		"/C/Users/Greg/Documents/GitHub/nowga/mobileApp/Nowgua/app/shared/firebase/index.ts",
-		"/C/Users/Greg/Documents/GitHub/nowga/mobileApp/Nowgua/platforms/android/src/main/assets/app/shared/interventions/interventions.model.ts"
+		"/C/Users/Greg/Documents/GitHub/nowga/mobileApp/Nowgua/app/shared/firebase/database/database.service.ts"
 	],
 	"find":
 	{
@@ -779,6 +823,24 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"this.dataConnection",
+			"dataConnection",
+			"nativeView",
+			"listenToDataConnection",
+			"webRtcContainerView",
+			"hisDataConnection",
+			"hisPeerId",
+			"minePeerId",
+			"navigator",
+			"}\n",
+			"dataConnectionEventEnum",
+			"peerEventEnum",
+			"io.",
+			"tns-platform-declarations",
+			"permissions",
+			"Activity",
+			"android",
+			">\n",
 			"hisPeerId",
 			"connection(",
 			"connection",
@@ -888,25 +950,7 @@
 			"getLabelThumbnailDownload",
 			"downloadLabel",
 			"getLabelThumbnailDownload",
-			"getAndAddPictureThumbnail",
-			"currentIntervention",
-			"setLabels",
-			"toValidate",
-			"height",
-			"stopTrackingLocation",
-			"addTask(",
-			"loader",
-			"emitOnChangeInstructions",
-			"send()",
-			"currentIntervention",
-			"isLoaded",
-			"displayHeaderElements",
-			"isLoaded",
-			"fbHelper.update",
-			"endOfInterventionOffline",
-			"fbHelper.update",
-			"RadSideDrawer",
-			"drawerComponent"
+			"getAndAddPictureThumbnail"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -924,7 +968,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 3,
 			"sheets":
 			[
 				{
@@ -933,20 +977,22 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 927,
+						"buffer_size": 1141,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								927,
-								927
+								531,
+								540
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true,
 							"typescript_plugin_format_options":
 							{
 								"convertTabsToSpaces": false,
@@ -958,7 +1004,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
@@ -967,44 +1013,83 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1498,
+						"buffer_size": 3007,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1312,
-								1312
+								1915,
+								1915
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true,
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": true,
+								"indentSize": 4,
+								"tabSize": 4
+							},
+							"use_tab_stops": false
+						},
+						"translation.x": -0.0,
+						"translation.y": 1218.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "webrtc.common.ts",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 582,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
 							"use_tab_stops": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 252.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 3,
 					"file": "webrtc.android.ts",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6814,
+						"buffer_size": 11953,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2600,
-								2600
+								11466,
+								11466
 							]
 						],
 						"settings":
@@ -1020,49 +1105,19 @@
 							"use_tab_stops": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 1445.0,
+						"translation.y": 5535.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "package.json",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2026,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1875,
-								1881
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 205.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 5,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 4,
-					"file": "webrtc.android.d.ts",
+					"file": "webrtc.common.d.ts",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 593,
+						"buffer_size": 208,
 						"regions":
 						{
 						},
@@ -1076,6 +1131,35 @@
 						"settings":
 						{
 							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
+							"use_tab_stops": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "node_modules/tns-platform-declarations/android/declarations.d.ts",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2062,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1914,
+								1914
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true,
 							"use_tab_stops": false
@@ -1084,24 +1168,159 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "index.d.ts",
+					"buffer": 6,
+					"file": "demo/package.json",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 417,
+						"buffer_size": 1136,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								319,
-								319
+								993,
+								993
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "package.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2214,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								177,
+								177
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true,
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": true,
+								"indentSize": 2,
+								"tabSize": 2
+							}
+						},
+						"translation.x": 0.0,
+						"translation.y": 51.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "activity.ts",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1546,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								214,
+								214
+							]
+						],
+						"settings":
+						{
+							"auto_name": "import {setActivityCallbacks, AndroidActivityCallb",
+							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true,
+							"typescript_plugin_format_options":
+							{
+								"convertTabsToSpaces": true,
+								"indentSize": 4,
+								"tabSize": 4
+							},
+							"use_tab_stops": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "webrtc.android.d.ts",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 772,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								82,
+								82
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true,
+							"use_tab_stops": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "index.d.ts",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 468,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								363,
+								363
 							]
 						],
 						"settings":
@@ -1119,11 +1338,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 11,
 					"file": "demo/app/app.component.ts",
 					"semi_transient": false,
 					"settings":
@@ -1150,7 +1369,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
+					"stack_index": 11,
 					"type": "text"
 				}
 			]

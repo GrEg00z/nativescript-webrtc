@@ -14,8 +14,8 @@
     "build": "tsc",
     "demo.ios": "npm run preparedemo && cd demo && tns run ios --emulator",
     "demo.ios.device": "npm run preparedemo && cd demo && tns run ios",
-    "demo.android": "npm run preparedemo && cd demo && tns run android",
-    "demo.android2": "npm run build && npm run reset",
+    "demo.android_old": "npm run preparedemo && cd demo && tns run android",
+    "demo.android": "npm run build && npm run reset",
     "demo": "cd demo && tns run android",
     "test.ios": "cd demo && tns test ios --emulator",
     "test.ios.device": "cd demo && tns test ios",
@@ -23,7 +23,8 @@
     "preparedemo": "npm run build && cd demo && tns platform remove android && tns plugin remove nativescript-webrtc && tns plugin add C:\\Users\\Greg\\Documents\\GitHub\\nativescript-webrtc && tns install",
     "setup": "npm i && cd demo && npm i && cd nativescript-webrtc && npm run build && cd demo && tns plugin add nativescript-webrtc && cd nativescript-webrtc",
     "postclone": "npm i && node scripts/postclone.js",
-    "reset": "cd demo && tns plugin remove nativescript-webrtc && tns plugin add C:\\Users\\Greg\\Documents\\GitHub\\nativescript-webrtc && tns run android"
+    "reset": "cd demo && tns plugin remove nativescript-webrtc && tns plugin add C:\\Users\\Greg\\Documents\\GitHub\\nativescript-webrtc && tns run android",
+    "reset.plugin": "npm run build && cd demo && tns plugin remove nativescript-webrtc && tns plugin add C:\\Users\\Greg\\Documents\\GitHub\\nativescript-webrtc"
   },
   "repository": {
     "type": "git",
@@ -52,5 +53,6 @@
     "tns-core-modules": "~3.0.0",
     "tns-platform-declarations": "^3.0.1",
     "typescript": "~2.2.1"
-  }
+  },
+  "dependencies": {}
 }
