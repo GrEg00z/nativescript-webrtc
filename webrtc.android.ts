@@ -56,7 +56,6 @@ declare module io {
             class ConnectOption {
             	metadata : any;
             	label : any;
-            	serialization : any;
             }
 
             class CallOption {
@@ -94,6 +93,10 @@ export class WebRtc extends ContentView {//WebRtcCommon {
 
 	// Media connection event
 	mediaConnectonEventEnum = io.skyway.Peer.MediaConnection.MediaEventEnum;
+
+
+	// Options
+	autoAnswer : boolean = true;
 
 
 	constructor() {
@@ -136,7 +139,6 @@ export class WebRtc extends ContentView {//WebRtcCommon {
 		var option = new io.skyway.Peer.ConnectOption();
 		option.metadata = "data connection";
 		option.label = "chat";
-		console.log("ConnectOption : ", option.serialization)
 		//option.serialization = "JSON";/*io.skyway.Peer.SerializationEnum.JSON;*/
 
 		//test
@@ -219,7 +221,13 @@ export class WebRtc extends ContentView {//WebRtcCommon {
 		this.mediaConnection = this.peer.call(peerId, this.mineStream, callOptions);
 
 		console.log("WebRtc :: this.mediaConnection : ", this.mediaConnection);
-		this.listenToMediaConnection(this.mediaConnection)/*.subscribe(
+
+		/*setTimeout(() => {
+			this.listenToMediaConnection(this.mediaConnection)
+		}, 5000)
+		*/
+
+		/*.subscribe(
 			(stream) => {
 				console.log("WebRtc :: Stream Received from listenToMediaConnection : ", stream)
 			},
@@ -326,17 +334,26 @@ export class WebRtc extends ContentView {//WebRtcCommon {
 			}));
 
 			peer.on(this.peerEventEnum.CALL, new io.skyway.Peer.OnCallback({
-				onCallback : (data) => {
-					console.log("WebRtc :: onCallback CALL : ", data)
+				onCallback : (mediaConnection) => {
+					console.log("WebRtc :: onCallback CALL : ", mediaConnection)
 
 					//setTimeout(() => {
 
 						//data.answer(this.mineStream);
-						data.answer(this.mineStream);
+						mediaConnection.answer(this.mineStream);
 
-						setTimeout(() => {
-							this.listenToMediaConnection(data)
-						}, 5000);
+
+						//let peerIdToConnect = mediaConnection.peer;
+
+						//console.log("peerIdToConnect :: ", peerIdToConnect)
+
+						//if(this.autoAnswer == true)
+						//console.log("")
+
+						/*setTimeout(() => {
+							//mediaConnection.answer(this.mineStream);
+							this.listenToMediaConnection(mediaConnection)
+						}, 5000);*/
 
 						/*.subscribe(
 							(stream) => {
@@ -412,13 +429,13 @@ export class WebRtc extends ContentView {//WebRtcCommon {
 				}
 			}));
 
-			console.log("WebRtc :: end of mediaConnection onCallback STREAM : ")
+			//console.log("WebRtc :: end of mediaConnection onCallback STREAM : ")
 			
-
-			/*mediaConnection.on(this.dataConnectionEventEnum.CLOSE, new io.skyway.Peer.OnCallback({
+			/*
+			mediaConnection.on(this.dataConnectionEventEnum.CLOSE, new io.skyway.Peer.OnCallback({
 				onCallback : (data) => {
 					console.log("WebRtc :: dataConnection onCallback CLOSE : ", data)
-					observer.complete();
+					//observer.complete();
 				}
 			}));
 
@@ -427,7 +444,7 @@ export class WebRtc extends ContentView {//WebRtcCommon {
 			mediaConnection.on(this.dataConnectionEventEnum.ERROR, new io.skyway.Peer.OnCallback({
 				onCallback : (data) => {
 					console.log("WebRtc :: dataConnection onCallback ERROR : ", data)
-					observer.error(data);
+					//observer.error(data);
 				}
 			}));*/
 		//});
