@@ -6,7 +6,7 @@ export declare class WebRtc {//WebRtcCommon {
   // use take the ios or android .d.ts files and copy/paste them here
   connection(): Observable<any>;
   connectTo(peerId : string): Observable<any>;
-  call(peerId : string): void;
+  call(peerId : string, isTheCaller? : boolean): void;
   sendMessage(message : any) : boolean;
   list(): Observable<Array<string>>
   getUserMedia() : void;

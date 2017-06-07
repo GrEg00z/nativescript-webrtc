@@ -9,7 +9,7 @@
     </ListView>-->
     <Button text="Connection" (tap)="connection()"></Button>
     <Button text="List !" (tap)="list()" *ngIf="peerReady"></Button>
-    <Button text="Send message !" (tap)="send()" *ngIf="peerReady"></Button>
+    <!--<Button text="Send message !" (tap)="send()" *ngIf="peerReady"></Button>-->
     <Button text="getUserMedia !" (tap)="getUserMedia()" *ngIf="peerReady"></Button>
 
     <!--<ListView [items]="items" class="list-group">
@@ -20,7 +20,7 @@
     </ListView>-->
 
     <StackLayout *ngFor="let peerId of peersId">
-        <Button [text]="'talk to ' + peerId" (tap)="connectTo(peerId)"></Button>
+        <!--<Button [text]="'talk to ' + peerId" (tap)="connectTo(peerId)"></Button>-->
         <Button [text]="'call ' + peerId" (tap)="call(peerId)"></Button>
     </StackLayout>
 

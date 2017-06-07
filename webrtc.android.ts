@@ -1,7 +1,9 @@
 //import { Observable } from 'data/observable';
 import { Observable } from 'rxjs/Observable';
 import { WebRtcCommon } from './webrtc.common';
+
 import * as app from "application";
+import * as dialogs from "ui/dialogs";
 
 //declare var io : any;
 declare var java : any;
@@ -81,6 +83,8 @@ export class WebRtc extends ContentView {//WebRtcCommon {
 	peer : any;
 	minePeerId : string;
 	mineStream : any;
+
+	isTheCaller : boolean = false;
 
 	dataConnection : any;
 	mediaConnection : any;
@@ -209,7 +213,10 @@ export class WebRtc extends ContentView {//WebRtcCommon {
 	}
 
 
-	call(peerId : string) {
+	call(peerId : string, isTheCaller? : boolean) {
+
+
+		let itc = isTheCaller ? isTheCaller : true;
 
 		console.log("WebRtc :: Peer to call : ", peerId)
 		console.log("WebRtc :: this.Peer : ", this.peer)
@@ -218,6 +225,7 @@ export class WebRtc extends ContentView {//WebRtcCommon {
 		let callOptions = new io.skyway.Peer.CallOption()
 		console.log("WebRtc :: callOptions : ", callOptions)
 
+		this.isTheCaller = itc;
 		this.mediaConnection = this.peer.call(peerId, this.mineStream, callOptions);
 
 		console.log("WebRtc :: this.mediaConnection : ", this.mediaConnection);
@@ -337,30 +345,31 @@ export class WebRtc extends ContentView {//WebRtcCommon {
 				onCallback : (mediaConnection) => {
 					console.log("WebRtc :: onCallback CALL : ", mediaConnection)
 
-					//setTimeout(() => {
+				    // A ce niveau, on entend seulement la voix de l'appelant
+					mediaConnection.answer();
 
-						//data.answer(this.mineStream);
-						mediaConnection.answer(this.mineStream);
+					// Si on recoit l'appel (et qu'on est pas à l'origine de l'appel)
+			        if(!this.isTheCaller) {
+						let optionsConfirm = {
+				            title: "Appel en cours",
+				            message: "Le peer " + mediaConnection.peer + " vous appel.",
+				            okButtonText: "Répondre",
+				            cancelButtonText: "Annuler",
+				        };
 
-
-						//let peerIdToConnect = mediaConnection.peer;
-
-						//console.log("peerIdToConnect :: ", peerIdToConnect)
-
-						//if(this.autoAnswer == true)
-						//console.log("")
-
-						/*setTimeout(() => {
-							//mediaConnection.answer(this.mineStream);
-							this.listenToMediaConnection(mediaConnection)
-						}, 5000);*/
-
-						/*.subscribe(
-							(stream) => {
-								console.log("WebRtc :: listenToMediaConnection stream : ", stream)
+				        // On propose de répondre à l'appel
+				        // La manip est d'effectuer un call vers l'appelant (model webrtc)
+				        // --> cela enverra le stream de l'appelé vers l'appelant
+						dialogs.confirm(optionsConfirm).then((result : boolean) => {
+							if(result) {
+								//mediaConnection.answer(this.mineStream);
+								this.call(mediaConnection.peer, false);
 							}
-						);*/
-					//})
+							else
+								mediaConnection.close();
+						})
+
+					}
 				}
 			}));
 
@@ -373,6 +382,22 @@ export class WebRtc extends ContentView {//WebRtcCommon {
 			}));
 
 		});
+	}
+
+	answerProcess(mediaConnection : any) {
+		//dialogs.conf
+		let optionsConfirm = {
+            title: "Prise en charge",
+            message: "Le peer " + mediaConnection.peer + " vous appel.",
+            okButtonText: "Répondre",
+            cancelButtonText: "Annuler",
+        };
+
+		dialogs.confirm(optionsConfirm).then((result : boolean) => {
+			if(result) {
+				mediaConnection.answer(this.mineStream);
+			}
+		})
 	}
 
 	listenToDataConnection(dataConnection : any) : Observable<any> {
